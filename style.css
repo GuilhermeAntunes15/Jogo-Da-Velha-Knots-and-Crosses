@@ -1,0 +1,74 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  padding: 16px 32px;
+  border: none;
+  color: white;
+  background-color: #020024;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.game-over-dialog {
+  text-align: center;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 5px;
+}
+.game-over-message {
+  padding: 16px 32px;
+  font-size: 32px;
+}
+
+.game-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: radial-gradient(circle, #c75987 0%, #251b46 75%, #020024 100%);
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  border-spacing: 8px;
+}
+
+.cell {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 3px;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.cell:hover::after {
+  content: var(--current-player, 'X');
+  opacity: 0.5;
+}
+
+.cell:empty {
+  cursor: pointer;
+}
+.cell:not(:empty) {
+  pointer-events: none;
+}
