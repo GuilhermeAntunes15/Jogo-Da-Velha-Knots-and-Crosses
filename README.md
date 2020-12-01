@@ -1,3 +1,3 @@
 # Jogo-Da-Velha-Hash
-Jogo Da Velha / Hash /n
-With HTML, CSS and JS
+Jogo Da Velha / Hash 
+* With HTML, CSS and JS
